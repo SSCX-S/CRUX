@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introduction to Climbing: A Beginner’s Guide | CRUX</title>
+<meta name="description" content="What climbing is, how grades work and the essential techniques every beginner should know: footwork, body position, weight distribution and route reading.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0B0B0C;--panel:#151517;--line:#2E2B24;--ink:#F4EFE3;--muted:#B9B2A0;--gold:#C9A24A;--gold2:#E3C56F;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:18px;line-height:1.7}
+h1,h2,h3,h4,.logo{font-family:'Space Grotesk',sans-serif}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--gold2);outline-offset:3px}
+p{margin:0 0 18px}
+#prog{position:fixed;top:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;z-index:10}
+.wrap{max-width:1100px;margin:0 auto;padding:24px 24px 72px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:64px}
+.logo{display:inline-flex;align-items:center;gap:3px;font-weight:700;font-size:24px;letter-spacing:.08em;text-decoration:none}
+.back{font-weight:600;color:var(--gold2);text-decoration:none;font-size:16px}
+.back:hover{text-decoration:underline}
+.hd{max-width:760px;margin-bottom:56px;padding-bottom:40px;border-bottom:1px solid var(--line)}
+.eb{margin:0 0 14px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1{margin:0 0 20px;font-size:clamp(38px,6.5vw,64px);line-height:1.05;letter-spacing:-.02em}
+.lead{font-size:20px;color:var(--muted);margin:0 0 24px}
+.meta{display:flex;flex-wrap:wrap;gap:10px;font-size:14px;font-weight:600}
+.meta span{padding:6px 14px;border:1px solid #3A3220;border-radius:999px;color:var(--gold2)}
+.grid{display:grid;grid-template-columns:minmax(0,720px) 240px;gap:72px;justify-content:space-between;align-items:start}
+.toc{position:sticky;top:32px;font-size:15px}
+.toc h2{margin:0 0 12px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.toc ol{list-style:none;margin:0;padding:0;border-left:1px solid var(--line)}
+.toc a{display:block;padding:6px 0 6px 16px;margin-left:-1px;border-left:2px solid transparent;color:var(--muted);text-decoration:none;line-height:1.4}
+.toc .sub a{padding-left:30px;font-size:14px}
+.toc a:hover{color:var(--ink)}
+.toc a.on{color:var(--gold2);border-left-color:var(--gold)}
+article h2{margin:64px 0 20px;font-size:clamp(28px,4vw,38px);line-height:1.15;letter-spacing:-.01em}
+article h2:first-child{margin-top:0}
+article h2 span{display:block;margin-bottom:8px;font-size:14px;letter-spacing:.14em;color:var(--gold)}
+article h3{margin:44px 0 14px;font-size:24px;line-height:1.25}
+article h4{margin:0 0 6px;font-size:18px}
+.tcs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px;margin:24px 0}
+.tc{padding:20px;background:var(--panel);border:1px solid var(--line);border-radius:12px;transition:border-color .2s ease,transform .2s ease}
+.tc:hover{border-color:var(--gold);transform:translateY(-3px)}
+.tc p{margin:0;font-size:16px;color:var(--muted);line-height:1.55}
+.call{margin:28px 0;padding:20px 24px;background:var(--panel);border-left:3px solid var(--gold);border-radius:0 12px 12px 0}
+.call p{margin:0;font-size:17px}
+.call strong{display:block;margin-bottom:4px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2)}
+.ladder{list-style:none;margin:24px 0;padding:0;display:grid;gap:10px}
+.ladder li{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:center;padding:16px 20px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+.gp{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:20px;color:var(--gold2)}
+.ladder p{margin:0 0 10px;font-size:16px;line-height:1.5}
+.ladder i{display:block;height:5px;border-radius:3px;background:linear-gradient(90deg,#6B5A2E,var(--gold))}
+.defs{list-style:none;margin:20px 0;padding:0;display:grid;gap:10px}
+.defs li{padding:14px 20px;background:var(--panel);border:1px solid var(--line);border-radius:12px;font-size:16px;line-height:1.5}
+.defs strong{display:block;font-family:'Space Grotesk',sans-serif;font-size:18px;color:var(--gold2);margin-bottom:2px}
+.defs span{color:var(--muted)}
+.chk{list-style:none;margin:20px 0;padding:0;display:grid;gap:10px}
+.chk li{position:relative;padding-left:28px}
+.chk li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:9px;border-radius:50%;background:var(--gold)}
+.cta{margin-top:72px;padding:36px;border-radius:16px;background:var(--gold);color:#0B0B0C}
+.cta h2{margin:0 0 8px;font-size:30px;color:#0B0B0C}
+.cta p{margin:0}
+.btn{display:inline-block;margin-top:20px;min-height:44px;padding:12px 26px;border-radius:8px;background:#0B0B0C;color:var(--ink);font-weight:600;text-decoration:none;transition:transform .2s ease}
+.btn:hover{transform:translateY(-2px)}
+footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:#A39C89;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+@media (max-width:959px){.grid{grid-template-columns:minmax(0,1fr);gap:40px}.toc{position:static;order:-1;padding:20px;background:var(--panel);border:1px solid var(--line);border-radius:12px}.top{margin-bottom:40px}}
+@media (max-width:560px){.ladder li{grid-template-columns:1fr;gap:6px}.cta{padding:26px}body{font-size:17px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<div id="prog" aria-hidden="true"></div>
+<div class="wrap">
+<div class="top"><a class="logo" href="index.html" aria-label="CRUX home">CRU<svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke-width="3.2" aria-hidden="true"><path d="M4 3 L24 25" stroke="#F4EFE3" stroke-linecap="square"/><path d="M24 3 C16 9 12 19 4 25" stroke="#C9A24A" stroke-linecap="round"/><circle cx="14" cy="14" r="3.4" fill="#C9A24A" stroke="#0B0B0C" stroke-width="2"/></svg></a><a class="back" href="index.html">Back to home</a></div>
+<header class="hd">
+<p class="eb">Beginner guide</p>
+<h1>Introduction to Climbing</h1>
+<p class="lead">A beginner’s guide to the sport: what it involves, how grades work and the core techniques to learn first.</p>
+<div class="meta"><span>Beginner</span><span>4 min read</span></div>
+</header>
+<div class="grid">
+<article>
+<h2 id="s1"><span>01</span>What is climbing?</h2>
+<p>Climbing is a sport that involves moving across or upwards on natural rock formations or artificial climbing walls. It combines physical strength, coordination, balance, problem-solving and mental focus.</p>
+<p>Unlike many traditional sports, climbing requires athletes to think carefully about each movement. Every hold, foothold and body position can influence how efficiently a climber completes a route.</p>
+<p>Climbing is also a highly accessible sport. People of different ages, experience levels and physical abilities can participate, with routes designed to accommodate beginners through to advanced athletes.</p>
+<p>There are several major forms of climbing:</p>
+<div class="tcs"><div class="tc"><h4>Bouldering</h4><p>Climbing shorter walls without ropes, using thick padded mats for protection.</p></div><div class="tc"><h4>Sport climbing</h4><p>Climbing taller routes while attached to a rope and using fixed protection points.</p></div><div class="tc"><h4>Traditional climbing</h4><p>Climbers place their own removable protection while ascending natural rock.</p></div><div class="tc"><h4>Speed climbing</h4><p>Racing against another climber or the clock on a standardised route.</p></div></div>
+<div class="call"><p><strong>Where to start</strong>For beginners, indoor bouldering is often a convenient introduction because it requires relatively little equipment and allows climbers to practise fundamental movements.</p></div>
+
+<h2 id="s2"><span>02</span>Understanding climbing grades</h2>
+<p>Climbing grades are used to communicate the difficulty of a route or problem.</p>
+<p>In many indoor bouldering gyms, the V-scale is used. It begins at V0 and increases as routes become more challenging. For example:</p>
+<ol class="ladder"><li><span class="gp">V0–V1</span><div><p>Beginner-friendly problems that introduce basic climbing movements.</p><i style="width:14%"></i></div></li><li><span class="gp">V2–V3</span><div><p>More demanding problems requiring improved balance and coordination.</p><i style="width:34%"></i></div></li><li><span class="gp">V4–V5</span><div><p>Intermediate problems that introduce more complex movements and physical challenges.</p><i style="width:54%"></i></div></li><li><span class="gp">V6–V8</span><div><p>Advanced problems requiring refined technique, strength and problem-solving.</p><i style="width:78%"></i></div></li><li><span class="gp">V9 and above</span><div><p>Highly challenging problems generally suited to experienced climbers.</p><i style="width:100%"></i></div></li></ol>
+<div class="call"><p><strong>Grades are not universal</strong>Different gyms, setters and climbing styles can produce noticeably different difficulties. A climber should focus on improving their movement and consistency rather than comparing grades with other people.</p></div>
+
+<h2 id="s3"><span>03</span>Essential climbing techniques</h2>
+<p>Good climbing technique is about using your body efficiently. Beginners sometimes rely heavily on their arms, but experienced climbers understand that footwork, balance and body positioning are equally important.</p>
+
+<h3 id="footwork">Footwork</h3>
+<p>Footwork is one of the most important foundations of climbing. Rather than placing your entire foot against a wall, climbing shoes allow you to use specific areas of the shoe to stand on small holds. Some basic footwork techniques include:</p>
+<ul class="defs"><li><strong>Edging</strong><span>Using the edge of your climbing shoe to stand on a foothold.</span></li><li><strong>Smearing</strong><span>Pressing the rubber sole against the wall when there is no obvious foothold.</span></li><li><strong>Toe placement</strong><span>Positioning the front of your shoe accurately on a hold.</span></li><li><strong>Quiet feet</strong><span>Placing your feet deliberately and avoiding unnecessary movement.</span></li></ul>
+<p>Accurate foot placement helps maintain balance and reduces wasted energy.</p>
+
+<h3 id="contact">Three points of contact</h3>
+<p>Three points of contact is a useful beginner principle. It involves maintaining three points of contact with the climbing wall while moving one limb at a time.</p>
+<p>For example, you might keep both feet and one hand on holds while moving your other hand. This encourages controlled movement and helps beginners avoid unnecessary swinging.</p>
+<div class="call"><p><strong>A guideline, not a rule</strong>Dynamic climbing movements sometimes require several limbs to move together.</p></div>
+
+<h3 id="body">Body positioning</h3>
+<p>Your body position determines how effectively you can reach holds and maintain balance. Important principles include:</p>
+<ul class="chk"><li>Keep your hips reasonably close to the wall when appropriate.</li><li>Avoid unnecessarily pulling yourself away from the wall.</li><li>Maintain a comfortable and balanced stance.</li><li>Bend your knees when useful to reach lower holds.</li><li>Rotate your hips and shoulders to improve reach.</li></ul>
+<p>Good positioning can make a difficult-looking movement considerably easier.</p>
+
+<h3 id="weight">Weight distribution</h3>
+<p>Climbers need to distribute their weight effectively between their hands and feet. Beginners often place too much weight on their arms, causing their upper body to become tired quickly.</p>
+<p>Instead, practise standing through your feet and allowing your legs to support much of your body weight. Learning to shift your centre of gravity is particularly useful when moving between holds.</p>
+
+<h3 id="route">Route reading</h3>
+<p>Route reading means studying a climbing problem before attempting it.</p>
+<div class="call"><p><strong>Go deeper</strong>Read our full guide: <a href="how-to-read-a-boulder-problem.html" style="color:var(--gold2);font-weight:600">How to read a boulder problem</a>.</p></div>
+
+<section class="cta">
+<h2>Ready for your next step?</h2>
+<p>Answer five quick questions and get a four-week plan built around your level.</p>
+<a class="btn" href="pathway.html">Take the Pathway quiz</a>
+</section>
+</article>
+<aside class="toc" aria-label="In this guide"><h2>In this guide</h2><ol><li><a href="#s1">What is climbing?</a></li><li><a href="#s2">Understanding grades</a></li><li><a href="#s3">Essential techniques</a></li><li class="sub"><a href="#footwork">Footwork</a></li><li class="sub"><a href="#contact">Three points of contact</a></li><li class="sub"><a href="#body">Body positioning</a></li><li class="sub"><a href="#weight">Weight distribution</a></li><li class="sub"><a href="#route">Route reading</a></li></ol></aside>
+</div>
+<footer><span>CRUX · Beyond the climb</span><span>General guidance, not coaching or medical advice.</span></footer>
+</div>
+<script>
+(function(){
+var bar=document.getElementById("prog");
+function u(){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.transform="scaleX("+(h>0?Math.min(1,window.scrollY/h):0)+")"}
+window.addEventListener("scroll",u,{passive:true});window.addEventListener("resize",u);u();
+var links=[].slice.call(document.querySelectorAll(".toc a")),map={};
+links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a});
+if("IntersectionObserver" in window){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){l.classList.remove("on")});if(map[e.target.id])map[e.target.id].classList.add("on")}})},{rootMargin:"-15% 0px -75% 0px"});
+Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el)});
+}
+})();
+</script>
+</body>
+</html>

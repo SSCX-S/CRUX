@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intermediate guide | CRUX</title>
+<meta name="description" content="For V3 to V5 climbers who have moved past the basics: the skills, session structure and habits that break plateaus.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0B0B0C;--panel:#151517;--line:#2E2B24;--ink:#F4EFE3;--muted:#B9B2A0;--gold:#C9A24A;--gold2:#E3C56F;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6}
+h1,h2,h3,.logo,b{font-family:'Space Grotesk',sans-serif}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--gold2);outline-offset:3px}
+.wrap{max-width:820px;margin:0 auto;padding:24px 24px 72px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:56px}
+.logo{display:inline-flex;align-items:center;gap:3px;font-weight:700;font-size:24px;letter-spacing:.08em;text-decoration:none}
+.back{font-weight:600;color:var(--gold2);text-decoration:none}
+.back:hover{text-decoration:underline}
+.eb{margin:0 0 12px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1{margin:0 0 18px;font-size:clamp(44px,8vw,76px);line-height:1;letter-spacing:-.025em}
+h1 em{font-style:normal;color:var(--gold)}
+h2{margin:64px 0 20px;font-size:clamp(26px,4vw,34px);line-height:1.15}
+h3{margin:0 0 4px;font-size:19px}
+.lead{font-size:19px;color:var(--muted);max-width:620px;margin:0 0 28px}
+p{margin:0}
+.list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.list li{display:flex;gap:16px;padding:18px 20px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+.list b{color:var(--gold2);font-size:20px;min-width:30px}
+.list p,.list span{color:var(--muted);font-size:16px}
+.list.check li{display:block}
+.list.check li::before{content:"";display:inline-block;width:8px;height:8px;margin-right:12px;border-radius:50%;background:var(--gold)}
+.list.wk b{min-width:64px;font-size:16px}
+.note{margin-top:14px;font-size:15px;color:var(--muted)}
+.cta{margin-top:64px;padding:36px;border-radius:16px;background:var(--gold);color:#0B0B0C}
+.cta h2{margin:0 0 8px;color:#0B0B0C}
+.btn{display:inline-block;margin-top:18px;min-height:44px;padding:13px 26px;border-radius:8px;background:#0B0B0C;color:var(--ink);font-weight:600;text-decoration:none;transition:transform .2s ease}
+.btn:hover{transform:translateY(-2px)}
+footer{margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:#A39C89}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.top+*,.top~*{animation:rise .6s ease both}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (max-width:600px){.list li{padding:16px}.cta{padding:26px}}
+.scale{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;margin:28px 0 8px}
+.scale span{padding:10px 0;text-align:center;border-radius:8px;border:1px solid var(--line);font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14px;color:#8C8472}
+.scale span.on{background:var(--gold);border-color:var(--gold);color:#0B0B0C}
+.cap{font-size:14px;color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px}
+.cards>div{padding:20px;background:var(--panel);border:1px solid var(--line);border-radius:12px;transition:border-color .2s ease,transform .2s ease}
+.cards>div:hover{border-color:var(--gold);transform:translateY(-3px)}
+.cards h3{margin:0 0 6px;font-size:18px;color:var(--gold2)}
+.cards p{font-size:15.5px;color:var(--muted);line-height:1.55}
+.list.ss b{min-width:96px;font-size:16px}
+.list li div strong{display:block;margin-bottom:2px}
+.list li strong{color:var(--ink);font-family:'Space Grotesk',sans-serif}
+@media (max-width:560px){.scale{gap:4px}.scale span{padding:8px 0;font-size:11px}.list.ss li{display:block}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<div class="top"><a class="logo" href="index.html" aria-label="CRUX home">CRU<svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke-width="3.2" aria-hidden="true"><path d="M4 3 L24 25" stroke="#F4EFE3" stroke-linecap="square"/><path d="M24 3 C16 9 12 19 4 25" stroke="#C9A24A" stroke-linecap="round"/><circle cx="14" cy="14" r="3.4" fill="#C9A24A" stroke="#0B0B0C" stroke-width="2"/></svg></a><a class="back" href="index.html">Back to home</a></div>
+<p class="eb">Intermediate guide</p>
+<h1>Break through the <em>plateau.</em></h1>
+<p class="lead">You’re past the basics. At V3 to V5, progress comes less from effort and more from precision, power and smarter practice.</p>
+<div class="scale" role="img" aria-label="V-scale from V0 to V9 with V3 to V5 highlighted"><span>V0</span><span>V1</span><span>V2</span><span class="on">V3</span><span class="on">V4</span><span class="on">V5</span><span>V6</span><span>V7</span><span>V8</span><span>V9</span></div>
+<p class="cap">This guide is for climbers around V3 to V5. Grades vary between gyms, so go by how the climbing feels.</p>
+
+<h2>What changes at this level</h2>
+<ul class="list check">
+<li>Moves get more complex: hooks, compression and dynamic movement replace simple pulling.</li>
+<li>Holds are smaller and rests are rarer, so body position matters more.</li>
+<li>When you fall, it’s usually technique or positioning, not strength alone.</li>
+<li>Recovery and session structure start to decide how fast you improve.</li>
+</ul>
+
+<h2>Skills to build</h2>
+<div class="cards"><div><h3>Heel and toe hooks</h3><p>Use your feet to pull in and take weight off your arms, especially on steeper walls.</p></div><div><h3>Drop knees and flagging</h3><p>Turn your hips side-on to reach further, and use a free leg for balance.</p></div><div><h3>Controlled dynamic moves</h3><p>Use your legs and a precise burst of momentum to reach, instead of pulling slowly on straight arms.</p></div><div><h3>Compression</h3><p>Squeeze between holds with your hands and feet to stay on the wall, especially on slopers and volumes.</p></div><div><h3>Core tension</h3><p>Keep your feet on the wall as you move between holds by engaging your core.</p></div><div><h3>Open-hand grip</h3><p>Use your whole hand on slopers. Crimping every hold puts more strain on your fingers.</p></div></div>
+
+<h2>Why plateaus happen</h2>
+<ul class="list"><li><b>01</b><div><strong>You climb the same style</strong><span>Seek out the angle or hold type you avoid, such as steep, slab, slopers or crimps.</span></div></li><li><b>02</b><div><strong>Every session is at your limit</strong><span>Mix easier volume with a few focused attempts at your limit.</span></div></li><li><b>03</b><div><strong>You skip rest</strong><span>Take rest days, and rest properly between hard attempts.</span></div></li><li><b>04</b><div><strong>You repeat mistakes unseen</strong><span>Film some attempts and watch your feet, hips and the point where you stall.</span></div></li></ul>
+
+<h2>A simple weekly structure</h2>
+<p class="lead" style="font-size:17px;margin-bottom:18px">A template for three sessions a week. Adjust it to how your body feels.</p>
+<ul class="list ss"><li><b>Session A</b><div><strong>Technique and volume</strong><span>Warm up, then climb plenty of problems a grade or two below your limit, with one skill in mind.</span></div></li><li><b>Session B</b><div><strong>Projecting</strong><span>Pick one or two problems at your limit. Work the hard sections and rest a few minutes between attempts.</span></div></li><li><b>Session C</b><div><strong>Your weakness</strong><span>Choose the style you avoid and repeat easier problems in it until it feels natural.</span></div></li><li><b>Rest</b><div><strong>Recovery</strong><span>Take at least one or two full rest days each week. Breakthroughs often come after rest.</span></div></li></ul>
+
+<h2>Gear and training</h2>
+<ul class="list check">
+<li><strong>Shoes:</strong> a moderately downturned pair can help on steeper climbing. Keep a flatter, comfortable pair for long volume sessions.</li>
+<li><strong>Finger training:</strong> many coaches suggest climbing consistently for a year or more first. If you start, get guidance, build up gradually and keep rest days.</li>
+<li><strong>Skin and recovery:</strong> look after your skin, sleep well and treat rest as part of training.</li>
+</ul>
+<p class="note">Sharp or localised finger pain is a reason to stop and rest. If it doesn’t settle, see a physio or doctor.</p>
+
+<h2>Signs you’re ready for Advanced</h2>
+<ul class="list check">
+<li>You can read and sequence most problems in your grade before touching the wall.</li>
+<li>You climb different styles with confidence, not just your favourite.</li>
+<li>You know your weaknesses and train them on purpose.</li>
+<li>You recover well and your sessions follow a plan.</li>
+</ul>
+
+<p class="note"><a href="advanced.html" style="color:var(--gold2);font-weight:600">Read the Advanced guide</a></p>
+<section class="cta">
+<h2>Want a plan for your level?</h2>
+<p>Answer five quick questions and get a four-week plan built around your grade and goals.</p>
+<a class="btn" href="pathway.html">Take the Pathway quiz</a>
+</section>
+
+<footer>This is general guidance, not coaching or medical advice. Stop if something hurts. Some links on CRUX are affiliate links, and we may earn a commission from qualifying purchases at no extra cost to you.</footer>
+</main>
+</body>
+</html>
