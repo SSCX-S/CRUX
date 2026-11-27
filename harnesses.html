@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Climbing harnesses | CRUX Gear Lab</title>
+<meta name="description" content="How to choose a climbing harness: fit, adjustability, gear loops, types and safety checks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0B0B0C;--panel:#151517;--line:#2E2B24;--ink:#F4EFE3;--muted:#B9B2A0;--gold:#C9A24A;--gold2:#E3C56F;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6}
+h1,h2,h3,.logo,b{font-family:'Space Grotesk',sans-serif}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--gold2);outline-offset:3px}
+.wrap{max-width:820px;margin:0 auto;padding:24px 24px 72px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:56px}
+.logo{display:inline-flex;align-items:center;gap:3px;font-weight:700;font-size:24px;letter-spacing:.08em;text-decoration:none}
+.back{font-weight:600;color:var(--gold2);text-decoration:none}
+.back:hover{text-decoration:underline}
+.eb{margin:0 0 12px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1{margin:0 0 18px;font-size:clamp(44px,8vw,76px);line-height:1;letter-spacing:-.025em}
+h1 em{font-style:normal;color:var(--gold)}
+h2{margin:64px 0 20px;font-size:clamp(26px,4vw,34px);line-height:1.15}
+h3{margin:0 0 4px;font-size:19px}
+.lead{font-size:19px;color:var(--muted);max-width:620px;margin:0 0 28px}
+p{margin:0}
+.list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.list li{display:flex;gap:16px;padding:18px 20px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+.list b{color:var(--gold2);font-size:20px;min-width:30px}
+.list p,.list span{color:var(--muted);font-size:16px}
+.list.check li{display:block}
+.list.check li::before{content:"";display:inline-block;width:8px;height:8px;margin-right:12px;border-radius:50%;background:var(--gold)}
+.list.wk b{min-width:64px;font-size:16px}
+.note{margin-top:14px;font-size:15px;color:var(--muted)}
+.cta{margin-top:64px;padding:36px;border-radius:16px;background:var(--gold);color:#0B0B0C}
+.cta h2{margin:0 0 8px;color:#0B0B0C}
+.btn{display:inline-block;margin-top:18px;min-height:44px;padding:13px 26px;border-radius:8px;background:#0B0B0C;color:var(--ink);font-weight:600;text-decoration:none;transition:transform .2s ease}
+.btn:hover{transform:translateY(-2px)}
+footer{margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:#A39C89}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.top+*,.top~*{animation:rise .6s ease both}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (max-width:600px){.list li{padding:16px}.cta{padding:26px}}
+.scale{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;margin:28px 0 8px}
+.scale span{padding:10px 0;text-align:center;border-radius:8px;border:1px solid var(--line);font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14px;color:#8C8472}
+.scale span.on{background:var(--gold);border-color:var(--gold);color:#0B0B0C}
+.cap{font-size:14px;color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px}
+.cards>div{padding:20px;background:var(--panel);border:1px solid var(--line);border-radius:12px;transition:border-color .2s ease,transform .2s ease}
+.cards>div:hover{border-color:var(--gold);transform:translateY(-3px)}
+.cards h3{margin:0 0 6px;font-size:18px;color:var(--gold2)}
+.cards p{font-size:15.5px;color:var(--muted);line-height:1.55}
+.list.ss b{min-width:96px;font-size:16px}
+.list li div strong{display:block;margin-bottom:2px}
+.list li strong{color:var(--ink);font-family:'Space Grotesk',sans-serif}
+@media (max-width:560px){.scale{gap:4px}.scale span{padding:8px 0;font-size:11px}.list.ss li{display:block}}
+.cats{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 0}
+.cats a{padding:10px 18px;border:1px solid #3A3220;border-radius:999px;font-weight:500;font-size:15px;line-height:1;text-decoration:none;transition:transform .2s ease,border-color .2s ease}
+.cats a:hover{border-color:var(--gold);transform:translateY(-2px);text-decoration:none}
+.cats a[aria-current="page"]{background:var(--gold);border-color:var(--gold);color:#0B0B0C}
+.call{margin:28px 0 0;padding:20px 24px;background:var(--panel);border-left:3px solid var(--gold);border-radius:0 12px 12px 0}
+.call strong{display:block;margin-bottom:4px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2)}
+.call p{font-size:17px}
+.soon{margin-top:64px;padding:28px;border:1px dashed #3A3220;border-radius:14px;color:var(--muted)}
+.soon h2{margin:0 0 8px;font-size:24px;color:var(--ink)}
+.cmpcta{margin-top:64px;padding:28px;background:var(--panel);border:1px solid var(--line);border-radius:14px}
+.cmpcta h2{margin:0 0 8px;font-size:26px}
+.cmpcta p{margin:0;color:var(--muted)}
+.cmpcta .btn{margin-top:18px}
+.btn.gold{background:var(--gold);color:#0B0B0C}
+.cats a.cmp{border-color:var(--gold);color:var(--gold2)}
+</style>
+</head>
+<body>
+<main class="wrap">
+<div class="top"><a class="logo" href="index.html" aria-label="CRUX home">CRU<svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke-width="3.2" aria-hidden="true"><path d="M4 3 L24 25" stroke="#F4EFE3" stroke-linecap="square"/><path d="M24 3 C16 9 12 19 4 25" stroke="#C9A24A" stroke-linecap="round"/><circle cx="14" cy="14" r="3.4" fill="#C9A24A" stroke="#0B0B0C" stroke-width="2"/></svg></a><a class="back" href="index.html">Back to home</a></div>
+<p class="eb">Gear Lab</p>
+<h1>Climbing <em>harnesses</em></h1>
+<p class="lead">A harness is safety-critical gear, so fit, comfort and condition matter. Here’s how to choose one and what to check.</p>
+<nav class="cats" aria-label="Gear categories"><a href="shoes.html">Shoes</a><a href="chalk.html">Chalk</a><a href="crash-pads.html">Crash pads</a><a href="harnesses.html" aria-current="page">Harnesses</a><a class="cmp" href="gear-lab.html#harness">Compare in the Gear Lab</a></nav>
+
+<h2>What to look for</h2>
+<div class="cards"><div><h3>Fit and comfort</h3><p>The waist belt sits above your hips and stays put when you hang. Try it on with a bit of weight on it, if you can.</p></div><div><h3>Adjustability</h3><p>Adjustable leg loops let you fit layers of clothing, and make it easier to share between climbers.</p></div><div><h3>Gear loops</h3><p>More loops help when you carry gear. A gym harness needs very few.</p></div><div><h3>Weight and padding</h3><p>Lighter harnesses suit sport climbing, and more padding is more comfortable on long routes.</p></div></div>
+
+<h2>Types of harness</h2>
+<div class="cards"><div><h3>All-round</h3><p>A comfortable, adjustable harness that works in the gym and outdoors.</p></div><div><h3>Sport</h3><p>Lighter and more minimal, built for hard single-pitch climbing.</p></div><div><h3>Trad or multi-pitch</h3><p>More padding and gear loops for carrying equipment and hanging for longer.</p></div></div>
+<div class="call"><p><strong>Safety first</strong>Follow the manufacturer’s instructions, learn from a qualified instructor and inspect your harness for wear before every use. Retire it according to the manufacturer’s guidance, and never use one with an unknown history.</p></div>
+
+<h2>Which one for your level</h2>
+<div class="cards"><div><h3>Beginner</h3><p>A comfortable all-round harness, and have an instructor show you how to put it on and tie in.</p></div><div><h3>Intermediate</h3><p>A lighter sport harness if you climb outdoors, with a few gear loops.</p></div><div><h3>Advanced</h3><p>A specialist harness for the type of climbing you do most.</p></div></div>
+
+<h2>Tips before you buy</h2>
+<ul class="list check"><li>Roped climbing needs a harness, but bouldering does not.</li><li>Check the labels for safety certification marks.</li><li>Try the harness on over the clothes you will climb in.</li><li>Ask your gym or a coach to check the fit with you.</li></ul>
+
+<h2>Common mistakes</h2>
+<ul class="list check"><li>Choosing the wrong size, or buying one that is too loose or too tight.</li><li>Skipping regular checks for wear on the webbing and buckles.</li><li>Not learning how to fasten and check it properly.</li><li>Buying a second-hand harness when you don’t know its history.</li></ul>
+
+<section class="cmpcta"><h2>Compare in the Gear Lab</h2><p>Our side-by-side harness comparison is on the way. In the meantime, see how the Gear Lab compares climbing shoes.</p><a class="btn gold" href="gear-lab.html#harness">Open the Gear Lab</a></section>
+
+<section class="cta">
+<h2>Not sure what you need?</h2>
+<p>Take the Pathway quiz and get a plan, including gear suggestions, for your level.</p>
+<a class="btn" href="pathway.html">Take the Pathway quiz</a>
+</section>
+
+<footer>This is general guidance, not professional advice. Some links on CRUX are affiliate links, and we may earn a commission from qualifying purchases at no extra cost to you.</footer>
+</main>
+</body>
+</html>
