@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Climbing chalk | CRUX Gear Lab</title>
+<meta name="description" content="A guide to climbing chalk: loose, chunky, chalk balls and liquid chalk, and how to choose.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0B0B0C;--panel:#151517;--line:#2E2B24;--ink:#F4EFE3;--muted:#B9B2A0;--gold:#C9A24A;--gold2:#E3C56F;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6}
+h1,h2,h3,.logo,b{font-family:'Space Grotesk',sans-serif}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--gold2);outline-offset:3px}
+.wrap{max-width:820px;margin:0 auto;padding:24px 24px 72px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:56px}
+.logo{display:inline-flex;align-items:center;gap:3px;font-weight:700;font-size:24px;letter-spacing:.08em;text-decoration:none}
+.back{font-weight:600;color:var(--gold2);text-decoration:none}
+.back:hover{text-decoration:underline}
+.eb{margin:0 0 12px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1{margin:0 0 18px;font-size:clamp(44px,8vw,76px);line-height:1;letter-spacing:-.025em}
+h1 em{font-style:normal;color:var(--gold)}
+h2{margin:64px 0 20px;font-size:clamp(26px,4vw,34px);line-height:1.15}
+h3{margin:0 0 4px;font-size:19px}
+.lead{font-size:19px;color:var(--muted);max-width:620px;margin:0 0 28px}
+p{margin:0}
+.list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.list li{display:flex;gap:16px;padding:18px 20px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+.list b{color:var(--gold2);font-size:20px;min-width:30px}
+.list p,.list span{color:var(--muted);font-size:16px}
+.list.check li{display:block}
+.list.check li::before{content:"";display:inline-block;width:8px;height:8px;margin-right:12px;border-radius:50%;background:var(--gold)}
+.list.wk b{min-width:64px;font-size:16px}
+.note{margin-top:14px;font-size:15px;color:var(--muted)}
+.cta{margin-top:64px;padding:36px;border-radius:16px;background:var(--gold);color:#0B0B0C}
+.cta h2{margin:0 0 8px;color:#0B0B0C}
+.btn{display:inline-block;margin-top:18px;min-height:44px;padding:13px 26px;border-radius:8px;background:#0B0B0C;color:var(--ink);font-weight:600;text-decoration:none;transition:transform .2s ease}
+.btn:hover{transform:translateY(-2px)}
+footer{margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:#A39C89}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.top+*,.top~*{animation:rise .6s ease both}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (max-width:600px){.list li{padding:16px}.cta{padding:26px}}
+.scale{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;margin:28px 0 8px}
+.scale span{padding:10px 0;text-align:center;border-radius:8px;border:1px solid var(--line);font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14px;color:#8C8472}
+.scale span.on{background:var(--gold);border-color:var(--gold);color:#0B0B0C}
+.cap{font-size:14px;color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px}
+.cards>div{padding:20px;background:var(--panel);border:1px solid var(--line);border-radius:12px;transition:border-color .2s ease,transform .2s ease}
+.cards>div:hover{border-color:var(--gold);transform:translateY(-3px)}
+.cards h3{margin:0 0 6px;font-size:18px;color:var(--gold2)}
+.cards p{font-size:15.5px;color:var(--muted);line-height:1.55}
+.list.ss b{min-width:96px;font-size:16px}
+.list li div strong{display:block;margin-bottom:2px}
+.list li strong{color:var(--ink);font-family:'Space Grotesk',sans-serif}
+@media (max-width:560px){.scale{gap:4px}.scale span{padding:8px 0;font-size:11px}.list.ss li{display:block}}
+.cats{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 0}
+.cats a{padding:10px 18px;border:1px solid #3A3220;border-radius:999px;font-weight:500;font-size:15px;line-height:1;text-decoration:none;transition:transform .2s ease,border-color .2s ease}
+.cats a:hover{border-color:var(--gold);transform:translateY(-2px);text-decoration:none}
+.cats a[aria-current="page"]{background:var(--gold);border-color:var(--gold);color:#0B0B0C}
+.call{margin:28px 0 0;padding:20px 24px;background:var(--panel);border-left:3px solid var(--gold);border-radius:0 12px 12px 0}
+.call strong{display:block;margin-bottom:4px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2)}
+.call p{font-size:17px}
+.soon{margin-top:64px;padding:28px;border:1px dashed #3A3220;border-radius:14px;color:var(--muted)}
+.soon h2{margin:0 0 8px;font-size:24px;color:var(--ink)}
+.cmpcta{margin-top:64px;padding:28px;background:var(--panel);border:1px solid var(--line);border-radius:14px}
+.cmpcta h2{margin:0 0 8px;font-size:26px}
+.cmpcta p{margin:0;color:var(--muted)}
+.cmpcta .btn{margin-top:18px}
+.btn.gold{background:var(--gold);color:#0B0B0C}
+.cats a.cmp{border-color:var(--gold);color:var(--gold2)}
+</style>
+</head>
+<body>
+<main class="wrap">
+<div class="top"><a class="logo" href="index.html" aria-label="CRUX home">CRU<svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke-width="3.2" aria-hidden="true"><path d="M4 3 L24 25" stroke="#F4EFE3" stroke-linecap="square"/><path d="M24 3 C16 9 12 19 4 25" stroke="#C9A24A" stroke-linecap="round"/><circle cx="14" cy="14" r="3.4" fill="#C9A24A" stroke="#0B0B0C" stroke-width="2"/></svg></a><a class="back" href="index.html">Back to home</a></div>
+<p class="eb">Gear Lab</p>
+<h1>Climbing <em>chalk</em></h1>
+<p class="lead">Chalk keeps your hands dry and your grip consistent. The right kind depends on how and where you climb.</p>
+<nav class="cats" aria-label="Gear categories"><a href="shoes.html">Shoes</a><a href="chalk.html" aria-current="page">Chalk</a><a href="crash-pads.html">Crash pads</a><a href="harnesses.html">Harnesses</a><a class="cmp" href="chalk-comparison.html">Compare chalk in the Gear Lab</a></nav>
+
+<h2>What to look for</h2>
+<div class="cards"><div><h3>Type</h3><p>Loose, chunky, ball or liquid. Each has a different mix of coverage, mess and convenience.</p></div><div><h3>Dust</h3><p>Some gyms limit loose chalk to keep the air clean, so check your gym’s rules first.</p></div><div><h3>Carrying</h3><p>A chalk bag on your waist, a bucket for bouldering, or a refillable chalk ball.</p></div><div><h3>Skin</h3><p>Chalk dries your hands. Look after your skin, and wash and moisturise after sessions.</p></div></div>
+
+<h2>Types of chalk</h2>
+<div class="cards"><div><h3>Loose chalk</h3><p>Fine powder with the most coverage. It is also the messiest.</p></div><div><h3>Chunky chalk</h3><p>Crushed pieces that make less dust and can be broken down as you need.</p></div><div><h3>Chalk ball</h3><p>A refillable sock that releases chalk as you squeeze, with less mess.</p></div><div><h3>Liquid chalk</h3><p>A base layer that lasts longer and makes less airborne dust. Let it dry before climbing.</p></div></div>
+
+
+<h2>Which one for your level</h2>
+<div class="cards"><div><h3>Beginner</h3><p>A chalk ball or liquid chalk, which are often gym-friendly. You may not need much at all.</p></div><div><h3>Intermediate</h3><p>Try liquid chalk as a base and loose chalk for hard attempts, if your gym allows it.</p></div><div><h3>Advanced</h3><p>Build a routine with the type you trust, and brush holds clean as you climb.</p></div></div>
+
+<h2>Tips</h2>
+<ul class="list check"><li>Check what your gym allows before you buy.</li><li>Keep your chalk in a bag you can close, to avoid spills.</li><li>Pair chalk with a soft brush to keep holds clean.</li><li>Moisturise your hands after sessions.</li></ul>
+
+<h2>Common mistakes</h2>
+<ul class="list check"><li>Using too much, which can fill the skin’s texture and make holds slippery.</li><li>Chalking up out of habit instead of when your hands are damp.</li><li>Ignoring your gym’s chalk rules.</li><li>Leaving chalk on holds. Brush them clean for the next climber.</li></ul>
+
+<section class="cmpcta"><h2>Compare chalk types</h2><p>See the four kinds of chalk compared side by side on dust, mess, speed and gym rules, plus product specs.</p><a class="btn gold" href="chalk-comparison.html">Open the chalk comparison</a></section>
+
+<section class="cta">
+<h2>Not sure what you need?</h2>
+<p>Take the Pathway quiz and get a plan, including gear suggestions, for your level.</p>
+<a class="btn" href="pathway.html">Take the Pathway quiz</a>
+</section>
+
+<footer>This is general guidance, not professional advice. Some links on CRUX are affiliate links, and we may earn a commission from qualifying purchases at no extra cost to you.</footer>
+</main>
+</body>
+</html>
