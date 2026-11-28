@@ -130,6 +130,17 @@ footer{margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-si
 .tw .pbar{display:inline-block;width:110px;vertical-align:middle;margin-right:10px}
 .tag{display:inline-block;margin-left:8px;padding:2px 8px;border-radius:999px;background:var(--gold);color:#0B0B0C;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
 @media (prefers-reduced-motion:reduce){.pc.flash{animation:none}}
+.wrap{max-width:1100px}
+.wrap>.src{max-width:780px}
+.tw table{table-layout:fixed;min-width:680px}
+.tw th[scope=row]{width:150px}
+.tw td{vertical-align:top}
+.cell .v{display:flex;align-items:center;flex-wrap:wrap;gap:6px 8px;margin-bottom:8px}
+.cell .v b{white-space:nowrap}
+.tw .cell .pbar{display:block;width:100%;max-width:190px;margin:0}
+.tag{margin-left:0;white-space:nowrap}
+.swipe{display:none;margin:0 0 8px;font-size:13px;color:var(--muted)}
+@media (max-width:700px){.swipe{display:block}.tw th[scope=row]{position:sticky;left:0;z-index:1;background:#151517;width:112px}}
 </style>
 </head>
 <body>
@@ -189,13 +200,14 @@ P.forEach(function(x,i){if(x.wt==null)return;var c=COL[x.t],on=cur==="All"||cur=
 g+='<g class="dotg" data-i="'+i+'" tabindex="'+(on?0:-1)+'" role="link" aria-label="'+x.n+', view profile" opacity="'+(on?1:.2)+'"><circle cx="'+cx+'" cy="'+cy+'" r="15" fill="'+c+'" stroke="#0B0B0C" stroke-width="2"><title>'+x.n+'</title></circle><text x="'+cx+'" y="'+(cy+5)+'" text-anchor="middle" font-size="13" font-weight="700" fill="'+txt(c)+'" pointer-events="none">'+(i+1)+'</text></g>'});
 $("map").innerHTML=g+'</svg>';
 }
-function card(x,i){var on=sel.indexOf(i)>-1,full=sel.length>=3&&!on,c=COL[x.t];
+function card(x,i){var on=sel.indexOf(i)>-1,full=sel.length>=3&&!on&&!demo,c=COL[x.t];
 return '<article class="pc'+(on?' pick':'')+'" id="pad-'+(i+1)+'" tabindex="-1"><div class="ph2"><span class="num" style="background:'+c+';color:'+txt(c)+'">'+(i+1)+'</span><div><h3>'+x.n+'</h3><p class="br">'+x.b+'</p></div><span class="ty">'+x.t+'</span></div>'
 +'<div class="bars"><div><span>Landing area</span>'+bar(x.a,MAXA)+'<em>'+fmt(x.a)+' sq in</em></div><div><span>Thickness</span>'+bar(x.th,MAXT)+'<em>'+x.th+' in</em></div><div><span>Weight</span>'+(x.wt==null?'<span class="pbar"></span><em>Not confirmed</em>':bar(x.wt,MAXW)+'<em>'+x.wt+' lbs</em>')+'</div><div><span>MSRP</span>'+(x.pr==null?'<span class="pbar"></span><em>Not confirmed</em>':bar(x.pr,MAXP)+'<em>$'+x.pr+'</em>')+'</div></div>'
 +'<div class="chips"><span>Open '+x.w+' x '+x.l+' in</span><span>Hip belt padded: '+x.hip+'</span></div>'
 +'<button type="button" class="cb" data-i="'+i+'" aria-pressed="'+on+'"'+(full?' disabled title="Remove one to add another"':'')+'>'+(on?'Added to comparison':'Compare')+'</button></article>'}
 function drawCards(){var h="";P.forEach(function(x,i){if(cur==="All"||x.t===cur)h+=card(x,i)});$("pcards").innerHTML=h;
 [].slice.call($("pcards").querySelectorAll(".cb")).forEach(function(b){b.onclick=function(){if(demo){sel=[];demo=false}var i=+b.getAttribute("data-i"),k=sel.indexOf(i);if(k>-1)sel.splice(k,1);else if(sel.length<3)sel.push(i);drawCards();drawCmp()}})}
+function cell(v,m,label,tag){return '<div class="cell"><div class="v"><b>'+label+'</b>'+(tag?'<span class="tag">'+tag+'</span>':'')+'</div>'+bar(v,m)+'</div>'}
 function drawCmp(){var b=$("cmpbody"),cb=$("cbar");
 if(!sel.length){b.innerHTML='<p style="margin:0;color:var(--muted)">Choose up to three pads with the Compare buttons above, and they will line up here side by side.</p>';cb.className="cbar";return}
 var ch=sel.map(function(i){return P[i]}),multi=ch.length>1;
@@ -203,13 +215,13 @@ var maxA=Math.max.apply(null,ch.map(function(x){return x.a})),maxT=Math.max.appl
 var wts=ch.filter(function(x){return x.wt!=null}).map(function(x){return x.wt}),minW=wts.length?Math.min.apply(null,wts):null;
 var prs=ch.filter(function(x){return x.pr!=null}).map(function(x){return x.pr}),minP=prs.length?Math.min.apply(null,prs):null;
 function row(l,f){return '<tr><th scope="row">'+l+'</th>'+ch.map(function(x){return '<td>'+f(x)+'</td>'}).join("")+'</tr>'}
-b.innerHTML='<p style="margin:0 0 16px;color:var(--muted)">'+(demo?'Sample comparison. Pick your own with the Compare buttons above to replace it.':(sel.length<3?'Add up to '+(3-sel.length)+' more to compare.':'Comparing three pads.'))+'</p><div class="tw"><table><thead><tr><th></th>'+ch.map(function(x){return '<th scope="col">'+x.n+'</th>'}).join("")+'</tr></thead><tbody>'
+b.innerHTML='<p style="margin:0 0 16px;color:var(--muted)">'+(demo?'Sample comparison. Pick your own with the Compare buttons above to replace it.':(sel.length<3?'Add up to '+(3-sel.length)+' more to compare.':'Comparing three pads.'))+'</p><p class="swipe">Swipe sideways to see every pad.</p><div class="tw"><table><thead><tr><th></th>'+ch.map(function(x){return '<th scope="col">'+x.n+'</th>'}).join("")+'</tr></thead><tbody>'
 +row("Fold type",function(x){return x.t})
 +row("Open size",function(x){return x.w+' x '+x.l+' in'})
-+row("Landing area",function(x){return bar(x.a,MAXA)+'<b>'+fmt(x.a)+' sq in</b>'+(multi&&x.a===maxA?'<span class="tag">Largest</span>':'')})
-+row("Thickness",function(x){return bar(x.th,MAXT)+'<b>'+x.th+' in</b>'+(multi&&x.th===maxT&&ch.some(function(y){return y.th<x.th})?'<span class="tag">Thickest</span>':'')})
-+row("Weight",function(x){return x.wt==null?'<span class="na">Not confirmed</span>':bar(x.wt,MAXW)+'<b>'+x.wt+' lbs</b>'+(multi&&x.wt===minW?'<span class="tag">Lightest</span>':'')})
-+row("MSRP",function(x){return x.pr==null?'<span class="na">Not confirmed</span>':bar(x.pr,MAXP)+'<b>$'+x.pr+'</b>'+(multi&&x.pr===minP?'<span class="tag">Lowest</span>':'')})
++row("Landing area",function(x){return cell(x.a,MAXA,fmt(x.a)+' sq in',multi&&x.a===maxA?'Largest':'')})
++row("Thickness",function(x){return cell(x.th,MAXT,x.th+' in',multi&&x.th===maxT&&ch.some(function(y){return y.th<x.th})?'Thickest':'')})
++row("Weight",function(x){return x.wt==null?'<span class="na">Not confirmed</span>':cell(x.wt,MAXW,x.wt+' lbs',multi&&x.wt===minW?'Lightest':'')})
++row("MSRP",function(x){return x.pr==null?'<span class="na">Not confirmed</span>':cell(x.pr,MAXP,'$'+x.pr,multi&&x.pr===minP?'Lowest':'')})
 +row("Folded size",function(x){return x.fo})
 +row("Foam",function(x){return x.foam})
 +row("Padded hip belt",function(x){return x.hip==="Yes"?'<span class="yes">Yes</span>':x.hip})
@@ -232,3 +244,4 @@ var hm=/^#pad-(\d+)$/.exec(location.hash);if(hm&&P[+hm[1]-1])setTimeout(function
 </script>
 </body>
 </html>
+
