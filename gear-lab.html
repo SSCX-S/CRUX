@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Gear Lab | CRUX</title>
+<meta name="description" content="The CRUX Gear Lab: honest, spec-based climbing gear comparisons. Start with 14 climbing shoes, with chalk, crash pads and harnesses on the way.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0B0B0C;--panel:#151517;--line:#2E2B24;--ink:#F4EFE3;--muted:#B9B2A0;--gold:#C9A24A;--gold2:#E3C56F;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6}
+h1,h2,h3,.logo,b{font-family:'Space Grotesk',sans-serif}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--gold2);outline-offset:3px}
+.wrap{max-width:820px;margin:0 auto;padding:24px 24px 72px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:56px}
+.logo{display:inline-flex;align-items:center;gap:3px;font-weight:700;font-size:24px;letter-spacing:.08em;text-decoration:none}
+.back{font-weight:600;color:var(--gold2);text-decoration:none}
+.back:hover{text-decoration:underline}
+.eb{margin:0 0 12px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1{margin:0 0 18px;font-size:clamp(44px,8vw,76px);line-height:1;letter-spacing:-.025em}
+h1 em{font-style:normal;color:var(--gold)}
+h2{margin:64px 0 20px;font-size:clamp(26px,4vw,34px);line-height:1.15}
+h3{margin:0 0 4px;font-size:19px}
+.lead{font-size:19px;color:var(--muted);max-width:620px;margin:0 0 28px}
+p{margin:0}
+.list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.list li{display:flex;gap:16px;padding:18px 20px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+.list b{color:var(--gold2);font-size:20px;min-width:30px}
+.list p,.list span{color:var(--muted);font-size:16px}
+.list.check li{display:block}
+.list.check li::before{content:"";display:inline-block;width:8px;height:8px;margin-right:12px;border-radius:50%;background:var(--gold)}
+.list.wk b{min-width:64px;font-size:16px}
+.note{margin-top:14px;font-size:15px;color:var(--muted)}
+.cta{margin-top:64px;padding:36px;border-radius:16px;background:var(--gold);color:#0B0B0C}
+.cta h2{margin:0 0 8px;color:#0B0B0C}
+.btn{display:inline-block;margin-top:18px;min-height:44px;padding:13px 26px;border-radius:8px;background:#0B0B0C;color:var(--ink);font-weight:600;text-decoration:none;transition:transform .2s ease}
+.btn:hover{transform:translateY(-2px)}
+footer{margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:#A39C89}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.top+*,.top~*{animation:rise .6s ease both}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (max-width:600px){.list li{padding:16px}.cta{padding:26px}}
+.scale{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;margin:28px 0 8px}
+.scale span{padding:10px 0;text-align:center;border-radius:8px;border:1px solid var(--line);font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14px;color:#8C8472}
+.scale span.on{background:var(--gold);border-color:var(--gold);color:#0B0B0C}
+.cap{font-size:14px;color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px}
+.cards>div{padding:20px;background:var(--panel);border:1px solid var(--line);border-radius:12px;transition:border-color .2s ease,transform .2s ease}
+.cards>div:hover{border-color:var(--gold);transform:translateY(-3px)}
+.cards h3{margin:0 0 6px;font-size:18px;color:var(--gold2)}
+.cards p{font-size:15.5px;color:var(--muted);line-height:1.55}
+.list.ss b{min-width:96px;font-size:16px}
+.list li div strong{display:block;margin-bottom:2px}
+.list li strong{color:var(--ink);font-family:'Space Grotesk',sans-serif}
+@media (max-width:560px){.scale{gap:4px}.scale span{padding:8px 0;font-size:11px}.list.ss li{display:block}}
+.hubs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:18px;margin-top:36px}
+.hub{display:flex;flex-direction:column;gap:12px;padding:26px;background:var(--panel);border:1px solid var(--line);border-radius:16px;transition:border-color .2s ease,transform .2s ease}
+.hub:hover{border-color:var(--gold);transform:translateY(-4px)}
+.hub:target{border-color:var(--gold)}
+.hub svg{color:var(--gold)}
+.hub h2{margin:0;font-size:26px}
+.hub p{margin:0;color:var(--muted);font-size:16px;line-height:1.55}
+.chip{align-self:flex-start;padding:5px 12px;border:1px solid;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.chip.live{border-color:var(--gold);color:var(--gold2)}
+.chip.wait{border-color:#3A3220;color:var(--muted)}
+.hub .btn{margin-top:auto;align-self:flex-start}
+.btn.gold{background:var(--gold);color:#0B0B0C}
+.btn.line{background:transparent;border:2px solid var(--gold);color:var(--ink);padding:10px 24px}
+.hub .lnk{font-weight:600;color:var(--gold2);font-size:15px}
+</style>
+</head>
+<body>
+<main class="wrap">
+<div class="top"><a class="logo" href="index.html" aria-label="CRUX home">CRU<svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke-width="3.2" aria-hidden="true"><path d="M4 3 L24 25" stroke="#F4EFE3" stroke-linecap="square"/><path d="M24 3 C16 9 12 19 4 25" stroke="#C9A24A" stroke-linecap="round"/><circle cx="14" cy="14" r="3.4" fill="#C9A24A" stroke="#0B0B0C" stroke-width="2"/></svg></a><a class="back" href="index.html">Back to home</a></div>
+<p class="eb">CRUX Gear Lab</p>
+<h1>The <em>Gear Lab</em></h1>
+<p class="lead">Honest, spec-based climbing gear comparisons. Pick a category to start. Shoes, chalk and crash pads are live now, and harnesses are on the way.</p>
+<div class="hubs"><article class="hub" id="shoes"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 32C6 22 12 14 22 14L30 22C34 25 42 26 42 33V37H6Z"/><path d="M6 37H42"/><path d="M18 22L22 26"/></svg><span class="chip live">Live · 14 shoes</span><h2>Climbing shoes</h2><p>Beginner to advanced on one map, with level filters and a side-by-side table for up to three shoes.</p><a class="btn gold" href="shoe-comparison.html">Open the shoe comparison</a><a class="lnk" href="shoes.html">Read the shoe guide</a></article><article class="hub" id="chalk"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 9H31L35 19V38Q35 42 31 42H17Q13 42 13 38V19Z"/><path d="M13 19H35"/><path d="M19 28H29"/></svg><span class="chip live">Live · 18 chalks</span><h2>Chalk</h2><p>The four kinds of chalk compared, plus 18 products you can line up side by side.</p><a class="btn gold" href="chalk-comparison.html">Open the chalk comparison</a><a class="lnk" href="chalk.html">Read the chalk guide</a></article><article class="hub" id="pads"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="14" width="38" height="22" rx="5"/><path d="M24 14V36"/><path d="M12 22H18M30 22H36"/></svg><span class="chip live">Live · 7 pads</span><h2>Crash pads</h2><p>Landing area, thickness, weight, fold type and price, with a weight-versus-coverage map.</p><a class="btn gold" href="crash-pad-comparison.html">Open the crash pad comparison</a><a class="lnk" href="crash-pads.html">Read the crash pad guide</a></article><article class="hub" id="harness"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="24" cy="13" rx="13" ry="5"/><path d="M13 16V30Q13 38 17 38Q21 38 21 30V17"/><path d="M35 16V30Q35 38 31 38Q27 38 27 30V17"/></svg><span class="chip wait">Coming soon</span><h2>Harnesses</h2><p>Fit, weight, gear loops and adjustability, compared with safety first.</p><a class="btn line" href="harnesses.html">Read the harness guide</a></article></div>
+
+<h2>How the Gear Lab works</h2>
+<div class="cards"><div><h3>Published specs, not hype</h3><p>We compare how gear is built, using specifications from manufacturers and trusted retailers, and we show our sources.</p></div><div><h3>Stats you can see</h3><p>Maps, meters and tables turn specs into something you can scan in seconds.</p></div><div><h3>Honest about limits</h3><p>We haven’t lab-tested these products yet, so there are no performance scores. Every comparison says so.</p></div></div>
+
+<section class="cta">
+<h2>Not sure what you need?</h2>
+<p>Take the Pathway quiz and get a plan, including gear suggestions, for your level.</p>
+<a class="btn" href="pathway.html">Take the Pathway quiz</a>
+</section>
+
+<footer>This is general guidance, not professional advice. Some links on CRUX are affiliate links, and we may earn a commission from qualifying purchases at no extra cost to you.</footer>
+</main>
+</body>
+</html>
